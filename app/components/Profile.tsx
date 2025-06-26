@@ -9,7 +9,7 @@ export default function Profile() {
           <div className={styles.imageSection}>
             <div className={styles.profileImageWrapper}>
               <div className={styles.profileImage}>
-                <img src="/anas.jpg?height=500&width=500" alt="Anas Lahboub" />
+                <img src="./anas.jpg?height=500&width=500" alt="Anas Lahboub" />
               </div>
               <div className={styles.statusBadge}>
                 <span>Disponible</span>

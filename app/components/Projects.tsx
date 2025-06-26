@@ -9,7 +9,7 @@ export default function Projects() {
       description:
         "Plateforme complète pour optimiser les flottes, planifier les trajets et gérer les chauffeurs. Interface intuitive avec authentification sécurisée et API robuste.",
       technologies: ["React.js", "Spring Boot", "MySQL", "Spring Security"],
-      image: "/dashboard.png?height=300&width=400",
+      image: "./dashboard.png?height=300&width=400",
       liveUrl: "https://github.com/anaslahboub/TMS-Back-end",
       githubUrl: "https://github.com/anaslahboub/TMS-Back-end",
       featured: true,
@@ -23,7 +23,7 @@ export default function Projects() {
       description:
         "Application de gestion de sprints et tâches avec API sécurisée. Système complet de suivi de projet avec authentification et gestion des rôles.",
       technologies: ["Spring Boot", "JPA", "MySQL", "JWT", "Spring Security", "Swagger"],
-      image: "/methodeAgile.jpg?height=300&width=400",
+      image: "./methodeAgile.jpg?height=300&width=400",
       liveUrl: "https://github.com/anaslahboub/AgilApplication",
       githubUrl: "https://github.com/anaslahboub/AgilApplication",
       featured: true,
@@ -37,7 +37,7 @@ export default function Projects() {
       description:
         "Application web pour la gestion des stocks et ventes en pharmacie. Interface moderne avec React et backend robuste en JavaEE.",
       technologies: ["React.js", "JavaEE", "MySQL", "Bootstrap"],
-      image: "/pharmacie.png?height=300&width=400",
+      image: "./pharmacie.png?height=300&width=400",
       liveUrl: "https://github.com/anaslahboub/pharmacie_project",
       githubUrl: "https://github.com/anaslahboub/pharmacie_project",
       featured: false,
@@ -51,7 +51,7 @@ export default function Projects() {
       description:
         "Site portfolio moderne et responsive développé avec Next.js et CSS. Design épuré avec animations fluides et navigation intuitive.",
       technologies: ["Next.js", "CSS", "TypeScript", "Vercel"],
-      image: "/portfolio.png?height=300&width=400",
+      image: "./portfolio.png?height=300&width=400",
       liveUrl: "#",
       githubUrl: "#",
       featured: false,
@@ -79,7 +79,7 @@ export default function Projects() {
       title: "Gestion des Stages à l'ENSA Agadir",
       description:"Plateforme digitale pour la gestion des stages des étudiants de l'ENSA Agadir. Le système permet aux étudiants de trouver des offres de stage, aux entreprises de poster des annonces, et aux administrateurs de suivre le processus de stage.",
       technologies: ["HTML", "CSS", "JavaScript", "PHP"],
-      image: "/project web.png?height=300&width=400",
+      image: "./project web.png?height=300&width=400",
       liveUrl: "https://github.com/anaslahboub/mon-premier-project-web-",
       githubUrl: "https://github.com/anaslahboub/mon-premier-project-web-",
       featured: false,
@@ -93,7 +93,7 @@ export default function Projects() {
       description:
         "Application desktop développée avec JavaFX pour la gestion complète d'un cabinet dentaire. Les fonctionnalités incluent la prise de rendez-vous, la gestion des dossiers patients, le suivi des traitements et la facturation.",
       technologies: ["JavaFX", "Java", "MySQL", "SceneBuilder"],
-      image: "/project java.png?height=300&width=400",
+      image: "./project java.png?height=300&width=400",
       liveUrl: "https://github.com/anaslahboub/project-javaFX",
       githubUrl: "https://github.com/anaslahboub/project-javaFX",
       featured: false,
@@ -173,7 +173,7 @@ export default function Projects() {
             {otherProjects.map((project) => (
               <div key={project.id} className={styles.projectCard}>
                 <div className={styles.cardImage}>
-                  <img src={project.image || "/placeholder.svg"} alt={project.title} />
+                  <img src={project.image || "./placeholder.svg"} alt={project.title} />
                   <div className={styles.cardOverlay}>
                     <div className={styles.cardActions}>
                       <a href={project.liveUrl} className={styles.actionBtn}>

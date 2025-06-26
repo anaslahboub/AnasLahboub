@@ -6,9 +6,9 @@ export const metadata: Metadata = {
   description: 'Created with Anas Lahboub',
   generator: '',
   icons: {
-    icon: '/logo.png', // Chemin vers votre fichier logo (dans le dossier public)
-    shortcut: '/logo.png',
-    apple: '/logo.png', 
+    icon: './logo.png', // Chemin vers votre fichier logo (dans le dossier public)
+    shortcut: './logo.png',
+    apple: './logo.png', 
   },
   openGraph: {
     images: '/logo.png', // Logo pour les partages sur les réseaux sociaux
@@ -24,13 +24,13 @@ export default function RootLayout({
     <html lang="en">
       <head>
         {/* Favicon pour les navigateurs modernes */}
-        <link rel="icon" href="/logo.png" type="image/png" sizes="any" />
+        <link rel="icon" href="./logo.png" type="image/png" sizes="any" />
         
         {/* Favicon pour Internet Explorer */}
-        <link rel="shortcut icon" href="/logo.png" />
+        <link rel="shortcut icon" href="./logo.png" />
         
         {/* Apple Touch Icon (pour iOS) */}
-        <link rel="apple-touch-icon" href="/logo.png" />
+        <link rel="apple-touch-icon" href="./logo.png" />
       </head>
       <body>{children}</body>
     </html>
