@@ -1,0 +1,355 @@
+.profile {
+  padding: 6rem 0;
+  background: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+
+.profile::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border-color), transparent);
+}
+
+.profile::after {
+  content: "";
+  position: absolute;
+  top: 20%;
+  right: -10%;
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(135deg, var(--accent-color), transparent);
+  border-radius: 50%;
+  opacity: 0.03;
+  z-index: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.imageSection {
+  display: flex;
+  justify-content: center;
+  animation: fadeInLeft 1s ease-out;
+}
+
+.profileImageWrapper {
+  position: relative;
+}
+
+.profileImage {
+  width: 320px;
+  height: 320px;
+  border-radius: 24px;
+  overflow: hidden;
+  background: var(--light-bg);
+  border: 4px solid var(--white);
+  box-shadow: 0 20px 60px var(--shadow-medium);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.profileImage:hover {
+  transform: translateY(-10px) rotate(2deg);
+  box-shadow: 0 30px 80px var(--shadow-heavy);
+}
+
+.profileImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.profileImage:hover img {
+  transform: scale(1.05);
+}
+
+.profileImage::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 60px;
+  height: 60px;
+  background: var(--accent-color);
+  border-radius: 50%;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.profileImage::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: -15px;
+  width: 40px;
+  height: 40px;
+  background: var(--primary-color);
+  border-radius: 50%;
+  opacity: 0.05;
+  z-index: -1;
+}
+
+.statusBadge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: var(--white);
+  border: 2px solid var(--border-color);
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 4px 15px var(--shadow-light);
+}
+
+.statusBadge span {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent-color);
+}
+
+.statusBadge::before {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  background: #10b981;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+.infoSection {
+  animation: fadeInRight 1s ease-out;
+}
+
+.introduction {
+  margin-bottom: 3rem;
+}
+
+.name {
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.title {
+  font-size: 1.3rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  margin: 0;
+}
+
+.education {
+  margin-bottom: 3rem;
+}
+
+.educationCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  background: var(--light-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 2rem;
+  border-left: 4px solid var(--accent-color);
+  transition: all 0.3s ease;
+}
+
+.educationCard:hover {
+  background: var(--white);
+  box-shadow: 0 10px 30px var(--shadow-light);
+  transform: translateY(-3px);
+}
+
+.educationIcon {
+  width: 60px;
+  height: 60px;
+  background: var(--accent-color);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  flex-shrink: 0;
+}
+
+.educationInfo h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.educationInfo p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.educationMeta {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.metaItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+.highlights {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.highlight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1.5rem;
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px var(--shadow-light);
+  transition: all 0.3s ease;
+  flex: 1;
+}
+
+.highlight:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px var(--shadow-medium);
+  background: var(--accent-color);
+  color: var(--white);
+}
+
+.highlightNumber {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--accent-color);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.highlight:hover .highlightNumber {
+  color: var(--white);
+}
+
+.highlightLabel {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.highlight:hover .highlightLabel {
+  color: var(--white);
+}
+
+.description {
+  background: var(--light-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 2rem;
+  border-left: 4px solid var(--primary-color);
+}
+
+.description p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+  }
+
+  .profileImage {
+    width: 280px;
+    height: 280px;
+  }
+
+  .name {
+    font-size: 2.5rem;
+  }
+
+  .highlights {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .educationCard {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .educationMeta {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .profileImage {
+    width: 240px;
+    height: 240px;
+  }
+
+  .name {
+    font-size: 2rem;
+  }
+
+  .educationCard,
+  .description {
+    padding: 1.5rem;
+  }
+
+  .highlights {
+    gap: 1rem;
+  }
+
+  .highlight {
+    padding: 1rem;
+  }
+
+  .educationMeta {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}

@@ -1,0 +1,316 @@
+.projects {
+  padding: 6rem 0;
+  background: var(--light-bg);
+  position: relative;
+}
+
+.projects::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border-color), transparent);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  position: relative;
+  letter-spacing: -0.02em;
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: var(--accent-color);
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+  font-weight: 400;
+}
+
+.featuredSection {
+  margin-bottom: 5rem;
+}
+
+.sectionTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 3rem;
+}
+
+.featuredGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+.featuredCard {
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px var(--shadow-light);
+  transition: all 0.3s ease;
+  animation: fadeInUp 0.6s ease-out;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 400px;
+}
+
+.featuredCard:nth-child(even) {
+  grid-template-columns: 1fr 1fr;
+}
+
+.featuredCard:nth-child(even) .cardImage {
+  order: 2;
+}
+
+.featuredCard:nth-child(even) .cardContent {
+  order: 1;
+}
+
+.featuredCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px var(--shadow-medium);
+}
+
+.projectGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.projectCard {
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 15px var(--shadow-light);
+  transition: all 0.3s ease;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.projectCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px var(--shadow-medium);
+}
+
+.cardImage {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+  background: var(--light-bg);
+}
+
+.featuredCard .cardImage {
+  height: 100%;
+}
+
+.cardImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.cardImage:hover img {
+  transform: scale(1.05);
+}
+
+.cardOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.cardImage:hover .cardOverlay {
+  opacity: 1;
+}
+
+.cardActions {
+  display: flex;
+  gap: 1rem;
+}
+
+.actionBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: var(--white);
+  color: var(--primary-color);
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.actionBtn:hover {
+  background: var(--accent-color);
+  color: var(--white);
+  border-color: var(--accent-color);
+  transform: scale(1.1);
+}
+
+.cardContent {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.featuredCard .cardContent {
+  padding: 3rem;
+}
+
+.cardTitle {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  letter-spacing: -0.01em;
+}
+
+.featuredCard .cardTitle {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.cardDescription {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+.featuredCard .cardDescription {
+  font-size: 1.1rem;
+}
+
+.starMethod {
+  background: var(--light-bg);
+  padding: 2rem;
+  border-radius: 8px;
+  border-left: 4px solid var(--accent-color);
+  margin-bottom: 2rem;
+}
+
+.starItem {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.starItem:last-child {
+  margin-bottom: 0;
+}
+
+.starItem strong {
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.techTag {
+  padding: 0.5rem 1rem;
+  background: var(--primary-color);
+  color: var(--white);
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.techTag:hover {
+  background: var(--accent-color);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .featuredCard {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .featuredCard:nth-child(even) .cardImage,
+  .featuredCard:nth-child(even) .cardContent {
+    order: initial;
+  }
+
+  .projectGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .cardContent,
+  .featuredCard .cardContent {
+    padding: 2rem;
+  }
+
+  .featuredCard .cardTitle {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .cardContent {
+    padding: 1.5rem;
+  }
+
+  .starMethod {
+    padding: 1.5rem;
+  }
+}
