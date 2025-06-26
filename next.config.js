@@ -1,18 +1,15 @@
+
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  images: {
-    unoptimized: true,
-  },
   output: 'export',
   trailingSlash: true,
-  basePath: process.env.NODE_ENV === 'production' ? '/AnasPort' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/AnasPort/' : '',
+  images: {
+    unoptimized: true
+  },
+  // Remplacez 'AnasLahboub' par le nom exact de votre repository
+  basePath: process.env.NODE_ENV === 'production' ? '/AnasLahboub' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/AnasLahboub/' : '',
 }
 
-module.exports = nextConfig; // CommonJS au lieu de export default
+module.exports = nextConfig;
