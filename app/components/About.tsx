@@ -1,5 +1,6 @@
 import { Award, Briefcase, GraduationCap, Target, Users, Zap } from "lucide-react"
 import styles from "./About.module.css"
+import Projects from "./Projects"
 
 export default function About() {
   return (
@@ -77,8 +78,10 @@ export default function About() {
             </div>
           </div>
 
+          <Projects />
+
           <div className={styles.achievements}>
-            <h3>Réalisations & Objectifs</h3>
+            <h3>Réalisations & Objectifs</h3>  
             <div className={styles.achievementsList}>
               <div className={styles.achievement}>
                 <div className={styles.achievementIcon}>
