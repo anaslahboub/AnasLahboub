@@ -1,4 +1,3 @@
-// next.config.js
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   eslint: {
@@ -10,10 +9,10 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  output: 'export',  // Génère des fichiers HTML/JS statiques (obligatoire pour GitHub Pages)
-  trailingSlash: true,  // Important pour GitHub Pages
-  basePath: process.env.NODE_ENV === 'production' ? '/AnasPort' : '',  // Important si ton repo n'est pas "tonuser.github.io"
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/AnasPort/' : '',  // Pour les assets
+  output: 'export',
+  trailingSlash: true,
+  basePath: process.env.NODE_ENV === 'production' ? '/AnasPort' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/AnasPort/' : '',
 }
 
-export default nextConfig
+module.exports = nextConfig; // CommonJS au lieu de export default
