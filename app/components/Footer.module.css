@@ -6,7 +6,7 @@
 }
 
 [data-theme="dark"] .footer {
-  background: var(--secondary-color);
+  background: #222222;
 }
 
 .footer::before {

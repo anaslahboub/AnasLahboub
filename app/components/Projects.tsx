@@ -12,7 +12,7 @@ export default function Projects() {
       image: "./dashboard.png?height=300&width=400",
       liveUrl: "https://github.com/anaslahboub/TMS-Back-end",
       githubUrl: "https://github.com/anaslahboub/TMS-Back-end",
-      featured: true,
+      featured: false,
       situation: "Besoin d'une plateforme pour optimiser les flottes de transport",
       action: "Conception et implémentation full-stack avec authentification sécurisée",
       result: "Interface intuitive accessible desktop/mobile avec API sécurisée",
@@ -26,7 +26,7 @@ export default function Projects() {
       image: "./methodeAgile.jpg?height=300&width=400",
       liveUrl: "https://github.com/anaslahboub/AgilApplication",
       githubUrl: "https://github.com/anaslahboub/AgilApplication",
-      featured: true,
+      featured: false,
       situation: "Gestion efficace des projets agiles et des équipes",
       action: "Développement d'une API REST complète avec Spring Boot",
       result: "Système de gestion performant avec authentification JWT",
@@ -115,7 +115,7 @@ export default function Projects() {
         </div>
 
         {/* Featured Projects */}
-        <div className={styles.featuredSection}>
+        {/*<div className={styles.featuredSection}>
           <h3 className={styles.sectionTitle}>
             <Star size={24} />
             Projets Phares
@@ -164,11 +164,11 @@ export default function Projects() {
               </div>
             ))}
           </div>
-        </div>
+        </div>*/}
 
         {/* Other Projects */}
         <div className={styles.otherSection}>
-          <h3 className={styles.sectionTitle}>Autres Projets</h3>
+          <h3 className={styles.sectionTitle}></h3>
           <div className={styles.projectGrid}>
             {otherProjects.map((project) => (
               <div key={project.id} className={styles.projectCard}>

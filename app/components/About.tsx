@@ -80,7 +80,7 @@ export default function About() {
 
           <Projects />
 
-          <div className={styles.achievements}>
+          {/* <div className={styles.achievements}>
             <h3>Réalisations & Objectifs</h3>  
             <div className={styles.achievementsList}>
               <div className={styles.achievement}>
@@ -137,7 +137,7 @@ export default function About() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

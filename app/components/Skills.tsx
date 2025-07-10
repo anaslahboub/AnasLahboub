@@ -1,4 +1,4 @@
-import { Code, Database, Globe, Wrench } from "lucide-react"
+import { Code, Database, Globe, Wrench,Award } from "lucide-react"
 import styles from "./Skills.module.css"
 
 export default function Skills() {
@@ -56,6 +56,18 @@ export default function Skills() {
       ],
     },
   ]
+  const certifications = [
+    {
+      title: "Oracle Certified Associate",
+      issuer: "Oracle University",
+      date: "July 2025",
+      skills: ["Java SE 8", "OOP", "JVM"],
+      icon: Award,
+      color: "#EF4444",
+      image: "./certification1.png",
+    },
+    // Add more certifications as needed
+  ];
 
   return (
     <section id="skills" className={styles.skills}>
@@ -109,6 +121,49 @@ export default function Skills() {
             )
           })}
         </div>
+        {/* Section Certifications Modifiée */}
+      <div className={styles.certificationsSection}>
+        <h3 className={styles.sectionTitle}>Certifications</h3>
+        <div className={styles.certificationsGrid}>
+          {certifications.map((cert, index) => {
+            const IconComponent = cert.icon;
+            return (
+              <div 
+                key={cert.title} 
+                className={styles.certificationCard}
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                {/* Partie supérieure avec l'image */}
+                <div className={styles.certImageContainer}>
+                  <img 
+                    src={cert.image} 
+                    alt={`Certificat ${cert.title}`}
+                    className={styles.certImage}
+                  />
+                </div>
+                
+                {/* Partie inférieure avec les détails */}
+                <div className={styles.certDetails}>
+                  <div className={styles.certHeader}>
+                    <div className={styles.certIcon} style={{ backgroundColor: cert.color }}>
+                      <IconComponent size={20} />
+                    </div>
+                    <div>
+                      <h4 className={styles.certTitle}>{cert.title}</h4>
+                      <p className={styles.certIssuer}>{cert.issuer} • {cert.date}</p>
+                    </div>
+                  </div>
+                  <div className={styles.certSkills}>
+                    {cert.skills.map(skill => (
+                      <span key={skill} className={styles.certSkill}>{skill}</span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
 
         <div className={styles.additionalInfo}>
           <div className={styles.infoCard}>

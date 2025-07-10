@@ -68,7 +68,7 @@ export default function Footer() {
         <div className={styles.bottom}>
           <div className={styles.copyright}>
             <p>
-              © {currentYear} Anas Lahboub. Fait avec <Heart size={16} className={styles.heartIcon} /> en France
+              © {currentYear} Anas Lahboub. Fait avec <Heart size={16} className={styles.heartIcon} /> en Taroudant
             </p>
           </div>
 

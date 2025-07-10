@@ -279,3 +279,139 @@
     padding: 1.5rem;
   }
 }
+
+/* Add to your Skills.module.css */
+
+.certificationsSection {
+  margin-bottom: 5rem;
+}
+
+.sectionTitle {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.sectionTitle::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 2px;
+  background: var(--accent-color);
+}
+
+.certificationsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.certificationCard {
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 15px var(--shadow-light);
+  transition: all 0.3s ease;
+  animation: fadeInUp 0.6s ease-out both;
+}
+
+.certificationCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px var(--shadow-medium);
+}
+
+.certHeader {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.certIcon {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  flex-shrink: 0;
+}
+
+.certTitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin: 0 0 0.25rem 0;
+}
+
+.certIssuer {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.certSkills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.certSkill {
+  background: var(--light-bg);
+  color: var(--text-primary);
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .certificationsGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .certificationCard {
+    padding: 1.5rem;
+  }
+}
+
+/* Styles pour la section Certifications avec images */
+.certImageContainer {
+  height: 180px;
+  overflow: hidden;
+  border-radius: 12px 12px 0 0;
+  margin: -2rem -2rem 1.5rem -2rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.certImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.certificationCard:hover .certImage {
+  transform: scale(1.03);
+}
+
+.certDetails {
+  padding: 0 0.5rem;
+}
+
+/* Ajustements pour mobile */
+@media (max-width: 768px) {
+  .certImageContainer {
+    height: 150px;
+    margin: -1.5rem -1.5rem 1rem -1.5rem;
+  }
+}
